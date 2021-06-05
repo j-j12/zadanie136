@@ -39,6 +39,7 @@ int main() {
 
 void prostopadloscian() {
 
+
     float a, b, c, wynik;
     printf("podaj a: \n");
     if(scanf("%f", &a)==0)
@@ -94,8 +95,42 @@ void prostopadloscian() {
 }
 
 void ostroslup() {
-    /* TODO - osoba3 */
+   /* TODO - osoba3 */
+float a, h, wynik;
+    printf("podaj A: \n");
+    if(scanf("%f", &a)==0)
+        {
+        printf("podaj cyfre\n");
+        exit(EXIT_FAILURE);
+        }
+    else
+    {
+    if(a<=0)
+    {
 
-    /* TODO - w³aœciwe obliczanie pola zrealizowaæ poprzez dedykowan¹ funkcjê */
-    printf("\npole ostroslupa - TODO\n\n");
+        printf("podaj a wieksze od 0\n");
+        exit(EXIT_FAILURE);
+    }
+    }
+    printf("podaj H sciany bocznej: \n");
+    if(scanf("%f", &h)==0)
+        {
+        printf("podaj cyfre");
+        exit(EXIT_FAILURE);
+        }
+    else
+    {
+    if(h<=0)
+    {
+
+        printf("podaj h wieksze od 0\n");
+        exit(EXIT_FAILURE);
+    }
+    }
+    wynik= ((a * a ) + (2*a*h));
+
+
+
+    /* TODO - wÅ‚aÅ›ciwe obliczanie pola zrealizowaÄ‡ poprzez dedykowanÄ… funkcjÄ™ */
+    printf("%s\n" "%.2f" "%s", "pole ostroslupa - ", wynik, "\n\n" );
 }
