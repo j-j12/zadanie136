@@ -25,7 +25,7 @@ int main() {
         scanf("%d", &wybrana_opcja);
 
         switch(wybrana_opcja) {
-            case OPCJA_PROSTOKAT:   prostopadloscian();          break;
+            case OPCJA_PROSTOPADLOSCIAN:   prostopadloscian();          break;
             case OPCJA_OSTROSLUP:     ostroslup();            break;
             case OPCJA_WYJSCIE:     wyjscie_z_programu = TRUE;  break;
             default:                printf("Niepoprawny kod polecenia.\n");
@@ -40,13 +40,47 @@ int main() {
 void prostopadloscian() {
     /* TODO - osoba2 */
 
-    /* TODO - w³aœciwe obliczanie pola zrealizowaæ poprzez dedykowan¹ funkcjê */
+    /* TODO - wÂ³aÅ“ciwe obliczanie pola zrealizowaÃ¦ poprzez dedykowanÂ¹ funkcjÃª */
     printf("\npole prostopadloscianu - TODO\n\n");
 }
 
 void ostroslup() {
-    /* TODO - osoba3 */
+   /* TODO - osoba3 */
+float a, h, wynik;
+    printf("podaj A: \n");
+    if(scanf("%f", &a)==0)
+        {
+        printf("podaj cyfre\n");
+        exit(EXIT_FAILURE);
+        }
+    else
+    {
+    if(a<=0)
+    {
 
-    /* TODO - w³aœciwe obliczanie pola zrealizowaæ poprzez dedykowan¹ funkcjê */
-    printf("\npole ostroslupa - TODO\n\n");
+        printf("podaj a wieksze od 0\n");
+        exit(EXIT_FAILURE);
+    }
+    }
+    printf("podaj H sciany bocznej: \n");
+    if(scanf("%f", &h)==0)
+        {
+        printf("podaj cyfre");
+        exit(EXIT_FAILURE);
+        }
+    else
+    {
+    if(h<=0)
+    {
+
+        printf("podaj h wieksze od 0\n");
+        exit(EXIT_FAILURE);
+    }
+    }
+    wynik= ((a * a ) + (2*a*h));
+
+
+
+    /* TODO - wÅ‚aÅ›ciwe obliczanie pola zrealizowaÄ‡ poprzez dedykowanÄ… funkcjÄ™ */
+    printf("%s\n" "%.2f" "%s", "pole ostroslupa - ", wynik, "\n\n" );
 }
